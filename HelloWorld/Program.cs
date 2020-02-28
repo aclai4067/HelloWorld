@@ -8,7 +8,7 @@ namespace HelloWorld
         {
         //greeting
 
-            Console.WriteLine("Please type you name and press Enter");
+            Console.WriteLine("Please type your name and press Enter");
             var UserName = Console.ReadLine();
 
             if (args.Length > 0)
