@@ -6,6 +6,11 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+        //greeting
+
+            Console.WriteLine("Please type you name and press Enter");
+            var UserName = Console.ReadLine();
+
             if (args.Length > 0)
             {
                 switch (args[0].ToLower())
@@ -35,13 +40,35 @@ namespace HelloWorld
             {
                 Console.WriteLine("Howdy, Y'all!!");
             }
+            Console.WriteLine($"Nice to meet you, {UserName}");
 
 
-            Console.ReadKey();
-
+        //animals
 
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan", "Horse", "Dog", "Tiger" };
-            
+
+          ////animal rides
+
+            Console.WriteLine("What is your favorite color?");
+            var FavColor = Console.ReadLine();
+
+            var rand = new Random();
+            var MaxNum = animals.Length - 1;
+            var RandomNum = rand.Next(MaxNum);
+
+            Console.WriteLine($"Would you like to ride a {FavColor} {animals[RandomNum]}?");
+            var rideResponse = Console.ReadLine();
+
+            if (rideResponse.ToLower() == "yes")
+            {
+                Console.WriteLine("Sweet!");
+            }
+            else
+            {
+                Console.WriteLine("Lame...");
+            }
+
+          ////animal syllables
 
             foreach (var animal in animals)
             {
